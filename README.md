@@ -19,3 +19,6 @@ Simple Tariff Comparison System using Web API .NET 8 framework. It uses simple f
 ## Available Functionalities
 * Fetch electricity tariff plans from external proivder
 * Compare tariff plan costs for total annual consumption kwh
+
+## Notes
+* A bash script is provided in the root to quickly install all requirements and run it on Linux
