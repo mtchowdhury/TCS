@@ -18,7 +18,7 @@ public class TariffController : ControllerBase
         _provider = provider;
     }
     [HttpGet("getannualcost")]
-    public async Task<ActionResult<List<CalculationResult>>> GetAnnualCosts([FromQuery]TariffRequest consumption,CancellationToken ct)
+    public ActionResult<List<CalculationResult>> GetAnnualCosts([FromQuery]TariffRequest consumption,CancellationToken ct)
     {
         var tariffs = _provider.GetTariffs(_configuration["TariffPath"]);
         var results = _comparator.CalculateAnnualCosts(consumption.ConsumptionUnit, tariffs);
